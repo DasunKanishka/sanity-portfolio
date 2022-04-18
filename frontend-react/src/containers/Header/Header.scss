@@ -1,0 +1,142 @@
+.app__header {
+	background: url('../../assets/bgIMG.png') center / cover;
+
+	@media screen and (min-width: 1200px) {
+		height: 100vh;
+	}
+
+	&-container {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+		width: 100%;
+		height: 100%;
+		padding: 8rem 1rem 2rem;
+
+		@media screen and (min-width: 1200px) {
+			flex-direction: row;
+			align-items: center;
+			padding: 10rem 2rem 0;
+		}
+	}
+
+	&-info {
+		display: flex;
+		flex: 0.65;
+		flex-direction: column;
+		margin-right: 0;
+	}
+
+	&-badge {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-end;
+		width: 100%;
+
+		@media screen and (min-width: 1200px) {
+			align-items: flex-end;
+		}
+
+		.badge-cmp,
+		.tag-cmp {
+			width: auto;
+			padding: 1rem 2rem;
+			background-color: var(--white-color);
+			border-radius: 15px;
+			box-shadow: 0 0 20px rgba(#000000, 0.1);
+		}
+
+		.badge-cmp {
+			gap: 1rem;
+
+			span {
+				font-size: 2rem;
+			}
+		}
+
+		.tag-cmp {
+			flex-direction: column;
+			margin-top: 3rem;
+
+			p {
+				width: 100%;
+				text-align: right;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	&-image {
+		height: 100%;
+		position: relative;
+		z-index: 0;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+
+		.overlay_circle {
+			margin: auto;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+		}
+	}
+
+	&-circles {
+		display: flex;
+		flex: 0.75;
+		gap: 2rem;
+		justify-content: space-evenly;
+		height: 100%;
+
+		@media screen and (min-width: 1200px) {
+			flex-direction: column;
+		}
+
+		.circle-cmp {
+			width: 25vw;
+			height: 25vw;
+			background-color: var(--white-color);
+			border-radius: 50%;
+			box-shadow: 0 0 20px rgba(#000000, 0.1);
+
+			@media screen and (min-width: 1200px) {
+				width: 25vh;
+				height: 25vh;
+			}
+
+			img {
+				width: auto;
+				height: 75%;
+			}
+
+			&:first-of-type {
+				width: 20vw;
+				height: 20vw;
+
+				@media screen and (min-width: 1200px) {
+					width: 20vh;
+					height: 20vh;
+				}
+			}
+
+			&:nth-of-type(2) {
+				width: 30vw;
+				height: 30vw;
+
+				@media screen and (min-width: 1200px) {
+					width: 30vh;
+					height: 30vh;
+					margin: 0 2rem;
+				}
+			}
+		}
+	}
+}
