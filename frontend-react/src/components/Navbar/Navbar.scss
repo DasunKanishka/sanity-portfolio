@@ -2,17 +2,22 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 100%;
 	padding: 1rem 2rem;
 	background-color: rgba($color: #ffffff, $alpha: 0.25);
 	backdrop-filter: blur(4px);
 	-webkit-backdrop-filter: blur(4px);
 	border: 1px solid rgba($color: #ffffff, $alpha: 0.25);
 	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
 
 	&-logo {
 		display: flex;
 		align-items: center;
+		font-family: var(--font-grypen);
+		font-size: 4rem;
+		font-weight: 700;
 	}
 
 	&-links {
