@@ -15,10 +15,10 @@ import react from '../assets/react.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
 
-import about01 from '../assets/about01.png';
-import about02 from '../assets/about02.png';
-import about03 from '../assets/about03.png';
-import about04 from '../assets/about04.png';
+import about01 from '../assets/about-01.webp';
+import about02 from '../assets/about-02.jpeg';
+import about03 from '../assets/about-03.jpeg';
+import about04 from '../assets/about-04.jpeg';
 
 import profile from '../assets/emma-watson-01.png';
 import pMin01 from '../assets/emma-watson-02.png';
