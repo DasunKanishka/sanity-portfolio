@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 
+import { SectionWrap } from '../../wrappers';
 import { Navbar } from '../../components';
 
 import './Header.scss';
@@ -16,7 +17,7 @@ const Header = () => {
 	};
 
 	return (
-		<header id="home" className="app__header app__flex">
+		<header>
 			<Navbar />
 
 			<div className="app__header-container">
@@ -80,4 +81,4 @@ const Header = () => {
 	);
 };
 
-export default Header;
+export default SectionWrap(Header, 'home', 'app__header app__flex');
