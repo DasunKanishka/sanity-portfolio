@@ -15,11 +15,6 @@ import react from '../assets/react.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
 
-import about01 from '../assets/about-01.webp';
-import about02 from '../assets/about-02.jpeg';
-import about03 from '../assets/about-03.jpeg';
-import about04 from '../assets/about-04.jpeg';
-
 import profile from '../assets/emma-watson-01.png';
 import pMin01 from '../assets/emma-watson-02.png';
 import pMin02 from '../assets/emma-watson-03.png';
@@ -52,10 +47,6 @@ export default {
 	react,
 	typescript,
 	vue,
-	about01,
-	about02,
-	about03,
-	about04,
 	profile,
 	pMin01,
 	pMin02,
