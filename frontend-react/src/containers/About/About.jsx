@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
+import { SectionWrap } from '../../wrappers';
 import { client, urlFor } from '../../client';
 
 import './About.scss';
@@ -15,7 +16,7 @@ const About = () => {
 	}, []);
 
 	return (
-		<section id="about" className="section-about">
+		<>
 			<h2 className="head-text">
 				The less <span>You Reveal</span> <br /> the more prople{' '}
 				<span>Can Wander</span>
@@ -45,8 +46,8 @@ const About = () => {
 					</motion.div>
 				))}
 			</div>
-		</section>
+		</>
 	);
 };
 
-export default About;
+export default SectionWrap(About, 'about', 'section-about');
