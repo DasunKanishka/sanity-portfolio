@@ -1,34 +1,18 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import { images } from '../../constants';
+import { client, urlFor } from '../../client';
 
 import './About.scss';
 
 const About = () => {
-	const abouts = [
-		{
-			title: 'Actress',
-			description: "I'm an actress since 1999",
-			imgUrl: images.about01,
-		},
-		{
-			title: 'Activist',
-			description:
-				'I was appointed UN Women Goodwill Ambassador in July 2014',
-			imgUrl: images.about02,
-		},
-		{
-			title: 'Magazine Editor',
-			description: 'I manage to find time to guest edit magazines',
-			imgUrl: images.about03,
-		},
-		{
-			title: 'Certified Yoga Teacher',
-			description: "I'm a fully trained yogi",
-			imgUrl: images.about04,
-		},
-	];
+	const [abouts, setAbouts] = useState([]);
+
+	useEffect(() => {
+		const GroqQuery = '*[_type == "abouts"]';
+
+		client.fetch(GroqQuery).then(data => setAbouts(data));
+	}, []);
 
 	return (
 		<section id="about" className="section-about">
@@ -48,7 +32,10 @@ const About = () => {
 					>
 						{about.imgUrl !== '' && (
 							<picture>
-								<img src={about.imgUrl} alt={about.title} />
+								<img
+									src={urlFor(about.imgUrl)}
+									alt={about.title}
+								/>
 							</picture>
 						)}
 
