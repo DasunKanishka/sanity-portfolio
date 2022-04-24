@@ -3,7 +3,7 @@ import { FaFilm } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Masonry from 'react-masonry-css';
 
-import { SectionWrap } from '../../wrappers';
+import { MotionWrap, SectionWrap } from '../../wrappers';
 import { urlFor, client } from '../../client';
 
 import './Work.scss';
@@ -145,4 +145,8 @@ const Work = () => {
 	);
 };
 
-export default SectionWrap(Work, 'work', 'section-work');
+export default SectionWrap(
+	MotionWrap(Work, 'section-work'),
+	'work',
+	'app__primarybg'
+);
