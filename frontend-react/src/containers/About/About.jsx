@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-import { SectionWrap } from '../../wrappers';
+import { MotionWrap, SectionWrap } from '../../wrappers';
 import { client, urlFor } from '../../client';
 
 import './About.scss';
@@ -50,4 +50,8 @@ const About = () => {
 	);
 };
 
-export default SectionWrap(About, 'about', 'section-about');
+export default SectionWrap(
+	MotionWrap(About, 'section-about'),
+	'about',
+	'app__whitebg'
+);
