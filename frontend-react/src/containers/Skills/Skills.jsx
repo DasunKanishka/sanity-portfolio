@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import ReactTooltip from 'react-tooltip';
 
-import { SectionWrap } from '../../wrappers';
+import { MotionWrap, SectionWrap } from '../../wrappers';
 import { client, urlFor } from '../../client';
 
 import './Skills.scss';
@@ -101,4 +101,8 @@ const Skills = () => {
 	);
 };
 
-export default SectionWrap(Skills, 'skills', 'section-skills');
+export default SectionWrap(
+	MotionWrap(Skills, 'section-skills'),
+	'skills',
+	'app__whitebg'
+);
