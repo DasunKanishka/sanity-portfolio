@@ -1,0 +1,88 @@
+.section-testimonials {
+	flex-direction: column;
+
+	.testimonials-item {
+		gap: 10%;
+		width: 80%;
+		padding: 1rem;
+		background-color: var(--white-color);
+		border-radius: 15px;
+		box-shadow: 0 0 20px rgba(#000000, 0.1);
+
+		@media screen and (min-width: 980px) {
+			padding: 2rem;
+		}
+
+		img {
+			width: 20%;
+		}
+
+		.content {
+			flex-grow: 1;
+
+			p {
+				@media screen and (min-width: 980px) {
+					font-size: 1.2rem;
+				}
+			}
+
+			> div {
+				margin-top: 1rem;
+
+				h4,
+				h5 {
+					font-size: 0.6rem;
+
+					@media screen and (min-width: 980px) {
+						font-size: 0.9rem;
+					}
+				}
+			}
+		}
+	}
+
+	.actions {
+		gap: 1rem;
+		margin-top: 1rem;
+
+		> div {
+			width: 40px;
+			height: 40px;
+			background-color: var(--white-color);
+			border-radius: 50%;
+		}
+	}
+
+	.brands {
+		gap: 10%;
+		margin-top: 2rem;
+
+		.brand {
+			width: 20vw;
+
+			@media screen and (min-width: 580px) {
+				width: 10vw;
+			}
+
+			@media screen and (min-width: 1200px) {
+				width: 5vw;
+			}
+
+			img {
+				display: block;
+				width: 100%;
+				height: auto;
+				filter: grayscale(100%);
+				opacity: 0.5;
+				transition: all 0.4s ease-in-out;
+			}
+
+			&:hover {
+				img {
+					filter: grayscale(0);
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
